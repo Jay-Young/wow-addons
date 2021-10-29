@@ -1,0 +1,26 @@
+## Interface: 90100
+## Title: MCL - Mount Collection Log
+## Title-zhCN: MCL - 坐骑收藏管理
+## Title-zhTW: MCL - 坐騎收藏管理
+## Notes: A tool used to log collected mounts in a similiar way to Simple Armory.
+## Notes-zhCN: 用于记录坐骑收藏的工具，功能类似 Simple Armory。
+## Notes-zhTW: 用於記錄坐騎收藏的工具，功能類似 Simple Armory。
+## Version: 1.042
+## DefaultState: enabled
+## LoadWith: Blizzard_Collections
+## SavedVariables: MCL, MCL_Settings
+## Author: Xubo - Tarren-Mill
+## Description: A tool used to log collected mounts in a similiar way to Simple Armory.
+
+# Locale files
+Locales\core.lua
+Locales\zhCN.lua
+Locales\zhTW.lua
+
+button.xml
+frame.xml
+data.lua
+config.lua
+Core.lua
+
+Minimap.xml
