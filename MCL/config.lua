@@ -528,7 +528,7 @@ local function createMCLicon()
 	mountJournalFrame:SetSize(40, 20)
 	mountJournalFrame.text = mountJournalFrame:CreateFontString(nil, "OVERLAY", "GameFontHighlight")
 	mountJournalFrame.text:SetPoint("CENTER", 1, 0)	
-	mountJournalFrame.text:SetText(L["MCL"])
+	mountJournalFrame.text:SetText("MCL")
 	mountJournalFrame.bg = mountJournalFrame:CreateTexture(nil, "BACKGROUND");
 	mountJournalFrame.bg:SetAllPoints(true);
 	mountJournalFrame.bg:SetColorTexture(0.25, 0.52, 0.9, 1);

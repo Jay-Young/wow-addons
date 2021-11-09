@@ -799,7 +799,7 @@ core.mountList = {
 		},
 		TimeWalking = {
 			name = L["Timewalking"],
-			mounts = {129923, 129922, 87775, 167894, 167895, 133543},
+			mounts = {129923, 129922, 87775, 167894, 167895, 133543, 188674},
 			mountID = {}
 		}
 	},
@@ -832,7 +832,7 @@ core.mountList = {
 		},
 		anniversary = {
 			name = L["WoW Anniversary Mounts"],
-			mounts = {115484, 172022, 172012, 172023},
+			mounts = {115484, 172022, 172012, 172023, 186469},
 			mountID = {1424}
 		},
 		Hearthstone = {
