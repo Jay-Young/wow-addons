@@ -2,7 +2,6 @@
 -- Namespaces
 --------------------------------------------------------
 local MCL, core = ...;
-local _, L = ...;
 core.Config = {};
 
 local MCL_Load = core.Config;
@@ -39,13 +38,13 @@ local function InitMounts()
 			end
 		end
 	end
-	print(L["|r|cff00ff00Mounts Initialized!"])
+	print("Mounts Initialized!")
 	MCL_Load.CreateMenu()
 end
 
 function MCL_Load:Toggle()
 	if not MCLFrame then
-		print(L["|r|cffff8040>>> Initializing MCL, Please wait <<<"])
+		print(">>> Initializing MCL, Please wait <<<")
 		InitMounts()
 		return
 	end
@@ -354,15 +353,13 @@ function MCL_Load:CreateMenu()
 	local MCL_playerFactionStr = UnitFactionGroup("player")
 	if MCL_playerFactionStr == "Alliance" then
 		MCL_playerFaction = 1
-		MCL_playerFactionStr = L["Alliance"]
 	else
 		MCL_playerFaction = 0
-		MCL_playerFactionStr = L["Horde"]
 	end
 
 	MCL_totalCollected = 0
 
-	local MCL_classic, MCL_tbc, MCL_wotlk, MCL_cata, MCL_mop, MCL_wod, MCL_legion, MCL_bfa, MCL_sl, MCL_racial, MCL_professions, MCL_pvp, MCL_worldevents, MCL_promotion, MCL_other, MCL_unobtainable = SetTabs(MCL_MF, 16, L["Classic"], L["TBC"], L["WOTLK"], L["CATA"], L["MOP"], L["WOD"], L["LEGION"], L["BFA"], L["SL"], MCL_playerFactionStr, L["Professions"], L["PVP"], L["WorldEvents"], L["Promotion"], L["Other"], L["Unobtainable"]);
+	local MCL_classic, MCL_tbc, MCL_wotlk, MCL_cata, MCL_mop, MCL_wod, MCL_legion, MCL_bfa, MCL_sl, MCL_racial, MCL_professions, MCL_pvp, MCL_worldevents, MCL_promotion, MCL_other, MCL_unobtainable = SetTabs(MCL_MF, 16, "Classic", "TBC", "WOTLK", "CATA", "MOP", "WOD", "LEGION", "BFA", "SL", MCL_playerFactionStr, "Professions", "PVP", "WorldEvents", "Promotion", "Other", "Unobtainable");
 
 	local MCL_sections = {
 		MCL_classic,
@@ -383,22 +380,22 @@ function MCL_Load:CreateMenu()
 		MCL_unobtainable
 	}
 	local MCL_sectionStrings = {
-		L["Classic"],
-		L["TBC"],
-		L["WOTLK"],
-		L["CATA"],
-		L["MOP"],
-		L["WOD"],
-		L["LEGION"],
-		L["BFA"],
-		L["SL"],
+		"Classic",
+		"TBC",
+		"WOTLK",
+		"CATA",
+		"MOP",
+		"WOD",
+		"LEGION",
+		"BFA",
+		"SL",
 		MCL_playerFactionStr,
-		L["Professions"],
-		L["PVP"],
-		L["WorldEvents"],
-		L["Promotion"],
-		L["Other"],
-		L["Unobtainable"]
+		"Professions",
+		"PVP",
+		"WorldEvents",
+		"Promotion",
+		"Other",
+		"Unobtainable"
 	}
 
 -- update "frame" with new information to display
@@ -510,7 +507,7 @@ function MCL_Load:CreateMenu()
 				end
 			end
 		end
-		MCL_MF.title:SetText(L["Mount Collection Log |  Collected "]..MCL_totalCollected);
+		MCL_MF.title:SetText("Mount Collection Log |  Collected "..MCL_totalCollected);
 	end
 	LoadData()
 	MCL_MF:SetScript("OnShow", function()
@@ -554,34 +551,3 @@ end
 f:RegisterEvent("ADDON_LOADED")
 f:RegisterEvent("PLAYER_LOGIN")
 f:SetScript("OnEvent", onevent)
-
--- minimap button
--- add this to your SavedVariables or as a separate SavedVariable to store its position
-MCL_Settings = {
-	MinimapPos = 45 -- default position of the minimap icon in degrees
-}
-
--- Call this in a mod's initialization to move the minimap button to its saved position (also used in its movement)
--- ** do not call from the mod's OnLoad, VARIABLES_LOADED or later is fine. **
-function MCL_MinimapButton_Reposition()
-	MCL_MinimapButton:SetPoint("TOPLEFT","Minimap","TOPLEFT",52-(80*cos(MCL_Settings.MinimapPos)),(80*sin(MCL_Settings.MinimapPos))-52)
-end
-
--- Only while the button is dragged this is called every frame
-function MCL_MinimapButton_DraggingFrame_OnUpdate()
-
-	local xpos,ypos = GetCursorPosition()
-	local xmin,ymin = Minimap:GetLeft(), Minimap:GetBottom()
-
-	xpos = xmin-xpos/UIParent:GetScale()+70 -- get coordinates as differences from the center of the minimap
-	ypos = ypos/UIParent:GetScale()-ymin-70
-
-	MCL_Settings.MinimapPos = math.deg(math.atan2(ypos,xpos)) -- save the degrees we are relative to the minimap center
-	MCL_MinimapButton_Reposition() -- move the button
-end
-
--- Put your code that you want on a minimap button click here.  arg1="LeftButton", "RightButton", etc
-function MCL_MinimapButton_OnClick()
-	--DEFAULT_CHAT_FRAME:AddMessage(tostring(arg1).." was clicked.")
-    MCL_Load:Toggle()
-end
