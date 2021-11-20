@@ -1,4 +1,4 @@
-## Interface: 90150
+## Interface: 90105
 ## Title: MCL - Mount Collection Log
 ## Title-zhCN: MCL - 坐骑收藏管理
 ## Title-zhTW: MCL - 坐騎收藏管理
