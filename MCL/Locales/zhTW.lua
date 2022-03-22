@@ -137,6 +137,9 @@ if GetLocale() == "zhTW" then
     L["Original Epic Mounts"] = "守舊坐騎"
     L["Old Promotion Mounts"] = "舊版促銷"
     L["Unobtainable Raid Mounts"] = "絕版團隊副本"
+    L["Protoform Synthesis"] = "原靈體合成"
+    L["Torghast"] = "托加斯特"
+    L["Mythic +"] = "鑰石王"
 
     -- config
     L["|r|cff00ff00Mounts Initialized!"] = "|r|cff00ff00MCL 加載成功！"

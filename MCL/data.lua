@@ -39,7 +39,7 @@ core.sectionNames = {
 	},
 	SL =  {
 		name = L["SL"],
-		category = {L["Achievement"], L["Vendor"], L["Treasures"], L["Adventures"], L["Riddles"], L["Tormentors"], L["Maw Assaults"], L["Reputation"], L["Paragon Reputation"], L["Dungeon Drop"], L["Raid Drop"], L["Zone"], L["Daily Activities"], L["Rare Spawn"], L["Oozing Necroray Egg"], L["Covenant Feature"], L["Night Fae"], L["Kyrian"], L["Necrolords"], L["Venthyr"]},
+		category = {L["Achievement"], L["Vendor"], L["Treasures"], L["Adventures"], L["Riddles"], L["Tormentors"], L["Maw Assaults"], L["Reputation"], L["Paragon Reputation"], L["Dungeon Drop"], L["Raid Drop"], L["Zone"], L["Daily Activities"], L["Rare Spawn"], L["Oozing Necroray Egg"], L["Covenant Feature"], L["Night Fae"], L["Kyrian"], L["Necrolords"], L["Venthyr"], L["Protoform Synthesis"], L["Torghast"]},
 	},
 	Horde = {
 		name = L["Horde"],
@@ -71,7 +71,7 @@ core.sectionNames = {
 	},
 	Unobtainable = {
 		name = L["Unobtainable"],
-		category = {L["Scroll of Resurrection"], L["Challenge Mode"], L["Recruit-A-Friend"], L["Ahead of the Curve"], L["Brawler's Guild"], L["Arena Mounts | TBC - WOD"], L["Arena Mounts | LEGION - SL"], L["Azeroth Choppers"], L["Original Epic Mounts"], L["Old Promotion Mounts"], L["Unobtainable Raid Mounts"], L["BrewFest"]}
+		category = {L["Mythic +"],L["Scroll of Resurrection"], L["Challenge Mode"], L["Recruit-A-Friend"], L["Ahead of the Curve"], L["Brawler's Guild"], L["Arena Mounts | TBC - WOD"], L["Arena Mounts | LEGION - SL"], L["Azeroth Choppers"], L["Original Epic Mounts"], L["Old Promotion Mounts"], L["Unobtainable Raid Mounts"], L["BrewFest"]}
 	}
 }
 core.mountList = {
@@ -79,7 +79,7 @@ core.mountList = {
 		name = L["SL"],
 		Achievement = {
 			name = L["Achievement"],
-			mounts = {186654, 186637, 184183, 182596, 186653, 184166, 186655, 182717, 187525},
+			mounts = {186654, 186637, 184183, 182596, 186653, 184166, 186655, 187673, 187682, 187675},
 			mountID = {}
 		},
 		Vendor = {
@@ -89,7 +89,7 @@ core.mountList = {
 		},
 		Treasures = {
 			name = L["Treasures"],
-			mounts = {180731, 180772},
+			mounts = {180731, 180772, 190766},
 			mountID = {}
 		},
 		Adventures = {
@@ -114,7 +114,7 @@ core.mountList = {
 		},
 		Reputation = {
 			name = L["Reputation"],
-			mounts = {180729, 182082, 183518, 183740, 186647, 186648},
+			mounts = {180729, 182082, 183518, 183740, 186647, 186648, 187629, 187640},
 			mountID = {}
 		},
 		ParagonReputation = {
@@ -129,7 +129,7 @@ core.mountList = {
 		},
 		RaidDrop = {
 			name = L["Raid Drop"],
-			mounts = {186656, 186642},
+			mounts = {186656, 186642, 190768, 190771},
 			mountID = {}
 		},
 		Zone = {
@@ -139,12 +139,12 @@ core.mountList = {
 		},
 		DailyActivities = {
 			name = L["Daily Activities"],
-			mounts = {182614, 182589, 186643, 186651, 186646},
+			mounts = {182614, 182589, 186643, 186651, 186646, 188808},
 			mountID = {}
 		},
 		RareSpawn = {
 			name = L["Rare Spawn"],
-			mounts = {180728, 180727, 180725, 182650, 180773, 182085, 184062, 182084, 182079, 180582, 183741, 184167, 187183, 186652 ,186645, 186659},
+			mounts = {180728, 180727, 180725, 182650, 180773, 182085, 184062, 182084, 182079, 180582, 183741, 184167, 187183, 186652 ,186645, 186659, 187676, 190765},
 			mountID = {}
 		},
 		OozingNecrorayEgg = {
@@ -176,13 +176,23 @@ core.mountList = {
 			name = L["Venthyr"],
 			mounts = {182954, 180581, 180948, 183715, 180945, 182209, 182332, 183798, 180461, 186476, 186478, 186477, 186479},
 			mountID = {}				
+		},
+		ProtoformSynthesis = {
+			name = L["Protoform Synthesis"],
+			mounts = {187632, 187670, 187663, 187665, 187630, 187631, 187638, 187664, 187677, 187683, 190580, 187679, 187667, 187639, 188809, 187668, 188810, 187672, 187669, 187641, 187678, 187671, 187660, 187666},
+			mountID = {}
+		},
+		Torghast = {
+			name = L["Torghast"],
+			mounts = {188700, 188696, 188736},
+			mountID = {}
 		}
 	},
 	BFA = {
 		name = L["BFA"],
 		Achievement = {
 			name = L["Achievement"],
-			mounts = {168056, 168055, 169162, 163577, 169194, 168329, 161215, 163216, 166539, 167171, 174861, 174654, 174836},
+			mounts = {168056, 168055, 169162, 163577, 169194, 168329, 161215, 163216, 166539, 167171, 174861, 174654},
 			mountID = {}
 		},
 		Vendor = {
@@ -736,7 +746,7 @@ core.mountList = {
 		},
 		Gladiator = {
 			name = L["Gladiator"],
-			mounts = {186177},
+			mounts = {189507},
 			mountID = {}
 		},
 		Halaa = {
@@ -813,7 +823,7 @@ core.mountList = {
 		BlizzardStore = {
 			name = L["Blizzard Store"],
 			mounts = {54811, 69846, 78924, 95341, 97989, 107951, 112326, 122469, 147901, 156564, 160589, 166775, 166774, 166776},
-			mountID = {1266, 1267, 1290, 1346, 1291, 1456, 1330}
+			mountID = {1266, 1267, 1290, 1346, 1291, 1456, 1330, 1531}
 		},
 		Blizzcon = {
 			name = L["Blizzcon"],
@@ -911,6 +921,11 @@ core.mountList = {
 	},
 	Unobtainable = {
 		name = L["Unobtainable"],
+		MythicPlus = {
+			name = L["Mythic +"],
+			mounts = {182717, 187525, 174836},
+			mountID = {}
+		},
 		ScrollOfResurrection = {
 			name = L["Scroll of Resurrection"],
 			mounts = {76902, 76889},
@@ -943,7 +958,7 @@ core.mountList = {
 		},
 		Arena2 = {
 			name = L["Arena Mounts | LEGION - SL"],
-			mounts = {141843, 141844, 141845, 141846, 141847, 141848, 153493, 156879, 156880, 156881, 156884, 183937},
+			mounts = {141843, 141844, 141845, 141846, 141847, 141848, 153493, 156879, 156880, 156881, 156884, 183937, 186177},
 			mountID = {}
 		},
 		DCAzerothChopper = {
