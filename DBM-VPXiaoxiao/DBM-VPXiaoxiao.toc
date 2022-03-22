@@ -1,16 +1,15 @@
-﻿## Interface: 90105
-## X-Min-Interface: 90105
+﻿## Interface: 90200
 ## Title:|cffffe00a<|r|cffff7d0aDBM|r|cffffe00a>|r |cff107C10Voicepack Xiaoxiao|r
 ## Title-zhCN:|cffffe00a<|r|cffff7d0aDBM|r|cffffe00a>|r |cff107C10晓晓语音包|r
 ## Title-zhTW:|cffffe00a<|r|cffff7d0aDBM|r|cffffe00a>|r |cff107C10曉曉語音包|r
 ## DefaultState: enabled
 ## RequiredDeps: DBM-Core
 ## Author: Jay
-## Version: 9.1.5
-## Notes: https://github.com/Jay-Young
+## Version: 9.2.0
+## Notes: https://github.com/Jay-Young/wow-addons/tree/main/DBM-VPXiaoxiao
 ## X-DBM-Voice: 1
 ## X-DBM-Voice-Name: Xiaoxiao(晓晓·普通话)
 ## X-DBM-Voice-ShortName: Xiaoxiao
-## X-DBM-Voice-Version: 11
+## X-DBM-Voice-Version: 12
 ## X-DBM-Voice-HasCount: 1
 DBM-VPXiaoxiao.lua
